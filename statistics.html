@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main--title {
+            color: #6c63ff;
+            font-weight: bold;
+        }
+
+        .chart-container {
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a52e8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <!-- Header -->
+        <div class="header--wrapper d-flex justify-content-between align-items-center mt-4">
+            <div class="header--title">
+                <span>Primary</span>
+                <h2>Statistics</h2>
+            </div>
+
+            <ul class="navbar-nav flex-row gap-3 justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="statistics.html">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- Statistics Content -->
+        <div class="chart-container">
+            <h3 class="main--title">Financial Overview</h3>
+
+            <div class="row">
+
+                <!-- Total Income -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Income</h5>
+                            <p class="card-text display-6">$12,450</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Expenses -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Expenses</h5>
+                            <p class="card-text display-6">$8,720</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Net Profit -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Net Profit</h5>
+                            <p class="card-text display-6">$3,730</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Transaction Chart Placeholder -->
+            <h3 class="main--title mt-5">Transaction Trends</h3>
+            <div class="text-center">
+                <img src="https://via.placeholder.com/800x400" alt="Transaction Chart" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>About Us</h5>
+                    <p>We provide advanced analytics and insights for better financial decision-making.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p>&copy; 2025 Finance Dashboard. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

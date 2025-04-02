@@ -1,7 +1,7 @@
 /* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/* Global Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -82,7 +82,6 @@ body {
     height: 120px;
 }
 
-/* Notification Panel */
 .notification-panel {
     background: linear-gradient(135deg, #34495e, #2c3e50);
     border-radius: 12px;

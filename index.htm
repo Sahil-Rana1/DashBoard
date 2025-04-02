@@ -9,17 +9,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="jquery.min.js"></script>
     
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
         <!-- Font Awesome (Icons - Fixed Version) -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     
         <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="@.css">
     </head>
     
@@ -40,11 +40,6 @@
             color: white;
             margin-bottom: 20px;
         }
-/* 
-        .light-red { background: #ff6b6b; }
-        .light-purple { background: #9b59b6; }
-        .light-green { background: #2ecc71; }
-        .light-blue { background: #3498db; } */
 
         .icon {
             font-size: 30px;
@@ -76,49 +71,49 @@
         <!-- Responsive Navbar -->
         <div class="header--wrapper d-flex justify-content-between align-items-center mt-4">
     
-            <!-- Logo (Always Visible) -->
+            <!-- Logo -->
             <div class="header--title">
                 <span>Primary</span>
                 <h2>Dashboard</h2>
             </div>
     
-            <!-- Navbar Items (Visible on md & larger, Offcanvas on sm) -->
-            <button class="navbar-toggler btn btn-primary me-3 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
+            <!-- Navbar Items -->
+            <button class="navbar-toggler btn btn-primary me-3 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="offcanvas offcanvas-start d-md-none" id="navbarNav" tabindex="-1">
+            <div class="offcanvas offcanvas-start" id="navbarNav">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    <button type="button" class="btn-close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Statistics</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="statistics.html">Statistics</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Careers</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">login</a></li>
                     </ul>
                 </div>
             </div>
     
-            <!-- Navbar Items (Always Visible on md & larger) -->
-            <ul class="navbar-nav flex-row gap-3 justify-content-center d-none d-md-flex">
+            <!-- Navbar Items-->
+            <ul class="navbar-nav flex-row gap-3 justify-content-center">
                 <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="statistics.html">Statistics</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="">Careers</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">login</a></li>
             </ul>
     
-            <!-- Search Box (Always Visible) -->
+            <!-- Search Box -->
             <div class="search--box ms-3">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search">
@@ -127,8 +122,6 @@
                     </button>
                 </div>
             </div>
-            
-    
         </div>
     
         
@@ -211,7 +204,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody> 
                                 <tr>
                                     <td>2024-02-01</td>
                                     <td>Expenses</td>
@@ -284,9 +277,9 @@
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled">
-                    <li><i class="fas fa-envelope me-2"></i> support@financeapp.com</li>
-                    <li><i class="fas fa-phone me-2"></i> +1 (123) 456-7890</li>
-                    <li><i class="fas fa-map-marker-alt me-2"></i> 123 Finance Street, NY, USA</li>
+                    <li><i class="fas fa-envelope me-2"></i> support124@.com</li>
+                    <li><i class="fas fa-phone me-2"></i> +91 1234567890</li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i> 123 Finance Street, golvwad, surat</li>
                 </ul>
 
                 <!-- Social Media Links -->

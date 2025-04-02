@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .profile-card {
+            border-radius: 12px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #6c63ff;
+            border-color: #6c63ff;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a52e8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <!-- Profile Header -->
+        <div class="text-center mb-4">
+            <h2 class="main--title">User Profile</h2>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="profile-card text-center">
+
+                    <!-- Profile Image -->
+                    <img src="user.jpg" alt="Profile Picture" class="profile-img mb-4">
+
+                    <!-- User Information -->
+                    <h3 id="userName">John Doe</h3>
+                    <p class="text-muted" id="userRole">Finance Manager</p>
+
+                    <hr>
+
+                    <!-- Contact Details -->
+                    <div class="text-start">
+                        <p><i class="fas fa-envelope me-2"></i> <span id="userEmail">johndoe@example.com</span></p>
+                        <p><i class="fas fa-phone me-2"></i> <span id="userPhone">+91 1234567890</span></p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> <span id="userAddress">123 Finance Street, Golvwad, Surat</span></p>
+                    </div>
+
+                    <!-- Edit Button -->
+                    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm">
+                        <div class="mb-3">
+                            <label for="editName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="editName" value="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editRole" class="form-label">Role</label>
+                            <input type="text" class="form-control" id="editRole" value="Finance Manager">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" value="johndoe@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPhone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="editPhone" value="+91 1234567890">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editAddress" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="editAddress" value="123 Finance Street, Golvwad, Surat">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveChanges">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('saveChanges').addEventListener('click', function() {
+            // Get updated values
+            const newName = document.getElementById('editName').value;
+            const newRole = document.getElementById('editRole').value;
+            const newEmail = document.getElementById('editEmail').value;
+            const newPhone = document.getElementById('editPhone').value;
+            const newAddress = document.getElementById('editAddress').value;
+
+            // Update profile details
+            document.getElementById('userName').textContent = newName;
+            document.getElementById('userRole').textContent = newRole;
+            document.getElementById('userEmail').textContent = newEmail;
+            document.getElementById('userPhone').textContent = newPhone;
+            document.getElementById('userAddress').textContent = newAddress;
+
+            // Close modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('editProfileModal'));
+            modal.hide();
+        });
+    </script>
+
+</body>
+
+</html>
